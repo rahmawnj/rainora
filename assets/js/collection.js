@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded",()=>{
-  const art=document.querySelector(".collection-art");
+  const art=document.querySelector(".hero-art");
   requestAnimationFrame(()=>art?.classList.add("loaded"));
 
   const filters=[...document.querySelectorAll(".filter")];
