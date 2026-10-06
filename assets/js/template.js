@@ -27,12 +27,19 @@ function setupTemplate(){
     if(!el.hasAttribute("data-scroll-image"))el.setAttribute("data-scroll-image","");
   });
 
+  const motionElements=[...document.querySelectorAll(".reveal,[data-scroll-reveal],[data-scroll-image]")];
   const observer=new IntersectionObserver(entries=>{
     entries.forEach(entry=>{
-      if(entry.isIntersecting){entry.target.classList.add("visible","is-visible");observer.unobserve(entry.target);}
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible","is-visible");
+      }else{
+        // Reset when leaving the viewport so the animation can replay
+        // when the user scrolls back in either direction.
+        entry.target.classList.remove("visible","is-visible");
+      }
     });
-  },{threshold:.1,rootMargin:"0px 0px -8% 0px"});
-  document.querySelectorAll(".reveal,[data-scroll-reveal],[data-scroll-image]").forEach(el=>observer.observe(el));
+  },{threshold:.12,rootMargin:"0px 0px -6% 0px"});
+  motionElements.forEach(el=>observer.observe(el));
 
   const parallaxItems=[...document.querySelectorAll("[data-scroll-image]")];
   let ticking=false;
