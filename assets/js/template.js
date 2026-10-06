@@ -13,9 +13,20 @@ function setupTemplate(){
   const page=document.body.dataset.page||"home";
   const header=document.querySelector("[data-header]");
   if(header){
-    if(page==="home")header.classList.add("is-overlay");
-    else header.classList.add("is-solid");
-    header.querySelectorAll("[data-nav]").forEach(link=>link.classList.toggle("active",link.dataset.nav===page));
+    if(page==="home"){
+      header.classList.add("is-overlay");
+      const updateHeader=()=>{
+        header.classList.toggle("is-scrolled",window.scrollY>32);
+      };
+      updateHeader();
+      window.addEventListener("scroll",updateHeader,{passive:true});
+    }else{
+      header.classList.add("is-solid");
+    }
+
+    header.querySelectorAll("[data-nav]").forEach(link=>{
+      link.classList.toggle("active",link.dataset.nav===page);
+    });
   }
 
   const motionTargets=[...document.querySelectorAll("main section, main .card, main .product, main .feature-copy, main .intro h2, main .ritual-copy, main .categories h2, main .topline")];
@@ -33,8 +44,6 @@ function setupTemplate(){
       if(entry.isIntersecting){
         entry.target.classList.add("visible","is-visible");
       }else{
-        // Reset when leaving the viewport so the animation can replay
-        // when the user scrolls back in either direction.
         entry.target.classList.remove("visible","is-visible");
       }
     });
