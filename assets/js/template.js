@@ -25,12 +25,33 @@ function setupTemplate(){
   const observer=new IntersectionObserver(entries=>{
     entries.forEach(entry=>{
       if(entry.isIntersecting){
-        entry.target.classList.add("visible");
+        entry.target.classList.add("visible","is-visible");
         observer.unobserve(entry.target);
       }
     });
-  },{threshold:.12});
-  document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+  },{threshold:.1,rootMargin:"0px 0px -8% 0px"});
+  document.querySelectorAll(".reveal,[data-scroll-reveal],[data-scroll-image]").forEach(el=>observer.observe(el));
+
+  const parallaxItems=[...document.querySelectorAll("[data-scroll-image]")];
+  let ticking=false;
+  function updateParallax(){
+    const viewport=window.innerHeight;
+    parallaxItems.forEach(item=>{
+      const rect=item.getBoundingClientRect();
+      if(rect.bottom<0||rect.top>viewport)return;
+      const center=rect.top+rect.height/2;
+      const offset=(viewport/2-center)*.075;
+      item.style.setProperty("--parallax-y",offset.toFixed(2)+"px");
+    });
+    ticking=false;
+  }
+  window.addEventListener("scroll",()=>{
+    if(!ticking){
+      window.requestAnimationFrame(updateParallax);
+      ticking=true;
+    }
+  },{passive:true});
+  updateParallax();
 
   const cursor=document.querySelector(".cursor");
   if(cursor){
