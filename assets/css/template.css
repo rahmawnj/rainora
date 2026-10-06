@@ -1,13 +1,13 @@
 :root{--ink:#202a25;--muted:#6c756f;--paper:#f5f5ef;--line:#dfe3da;--sage:#dce5d9;--deep:#30453b;--white:#fff}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-sans-serif;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 button{font:inherit}
 .site-header{height:82px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;left:0;width:100%;z-index:50;color:#fff;background:transparent;transition:background .35s,color .35s,border-color .35s}
 .site-header.is-overlay{margin-bottom:-82px}
 .site-header.is-solid{background:var(--paper);color:var(--ink);border-bottom:1px solid var(--line)}
-.site-logo{font:600 27px "Playfair Display",serif;letter-spacing:.13em}
+.site-logo{font:600 27px "DM Sans",sans-serif;letter-spacing:.13em}
 .site-nav{display:flex;gap:32px;font-size:11px;letter-spacing:.13em;text-transform:uppercase}
 .site-nav a{position:relative}
 .site-nav a:after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .35s}
@@ -15,7 +15,7 @@ button{font:inherit}
 .site-cta{border:1px solid currentColor;padding:11px 17px;border-radius:999px;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
 .site-footer{background:#26382f;color:#e8ede9;padding:70px 8vw 35px}
 .footer-top{display:flex;justify-content:space-between;gap:30px}
-.footer-logo{font:500 45px "Playfair Display",serif}
+.footer-logo{font:500 45px "DM Sans",sans-serif}
 .footer-note{color:#aebbb3;max-width:360px;font-size:13px;line-height:1.8;margin:8px 0 0}
 .footer-links{display:flex;gap:55px;font-size:12px;line-height:2.4;color:#c6d0ca}
 .footer-links div{display:flex;flex-direction:column}
@@ -23,7 +23,7 @@ button{font:inherit}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.15);margin-top:65px;padding-top:20px;display:flex;justify-content:space-between;color:#8f9e96;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
 .marquee{overflow:hidden;white-space:nowrap;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0}
 .marquee-track{display:inline-flex;min-width:max-content;animation:marquee 25s linear infinite}
-.marquee-track span{font:italic 24px "Playfair Display",serif;padding:0 28px}
+.marquee-track span{font:italic 24px "DM Sans",sans-serif;padding:0 28px}
 .marquee-track b{font-size:10px;letter-spacing:.18em;color:var(--muted);align-self:center}
 @keyframes marquee{to{transform:translateX(-50%)}}
 .reveal{opacity:0;transform:translateY(45px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)}
