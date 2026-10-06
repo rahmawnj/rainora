@@ -53,6 +53,15 @@ function setupTemplate(){
   },{passive:true});
   updateParallax();
 
+  const motionTargets=[...document.querySelectorAll("main section, main .card, main .product, main .feature-copy, main .intro h2, main .ritual-copy, main .categories h2, main .topline")];
+  motionTargets.forEach((el,index)=>{
+    if(!el.hasAttribute("data-scroll-reveal")) el.setAttribute("data-scroll-reveal", index%4===1 ? "left" : index%4===2 ? "right" : "up");
+    el.style.setProperty("--delay",Math.min(index%5*70,280)+"ms");
+  });
+  document.querySelectorAll("main .hero-art, main .hero-art img, main .ritual-art, main .feature-image, main .story-art, main .product-image, main .product-detail-image").forEach(el=>{
+    if(!el.hasAttribute("data-scroll-image")) el.setAttribute("data-scroll-image","");
+  });
+
   const cursor=document.querySelector(".cursor");
   if(cursor){
     window.addEventListener("pointermove",e=>{
