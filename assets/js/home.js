@@ -8,12 +8,12 @@ document.addEventListener("DOMContentLoaded",()=>{
     art?.classList.add("loaded");
   });
 
-  const leave=()=>{
-    if(!loader)return;
-    loader.classList.add("is-leaving");
-    window.setTimeout(()=>loader.remove(),1150);
-  };
-
-  if(document.readyState==="complete") window.setTimeout(leave,650);
-  else window.addEventListener("load",()=>window.setTimeout(leave,650),{once:true});
+  if(loader){
+    // The opening transition should never wait for remote images/fonts.
+    // Start after the first paint, then let the curtain reveal the page.
+    window.setTimeout(()=>{
+      loader.classList.add("is-leaving");
+      window.setTimeout(()=>loader.remove(),1150);
+    },700);
+  }
 });
