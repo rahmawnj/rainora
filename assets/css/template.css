@@ -41,3 +41,13 @@ button{font:inherit}
 .site-header:not(.is-solid) .collection-menu{background:rgba(38,56,47,.96);color:#fff;border-color:rgba(255,255,255,.18)}
 .site-header:not(.is-solid) .collection-menu a:hover{background:rgba(255,255,255,.1)}
 @media(max-width:850px){.collection-menu{display:none}}
+\n.footer-social-group,.footer-store-group{display:flex;flex-direction:column;gap:12px}
+.footer-social-group>span,.footer-store-group>span{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#8f9e96}
+.footer-social{display:flex;align-items:center;gap:14px}
+.social-link{display:grid;place-items:center;width:32px;height:32px;border:1px solid rgba(255,255,255,.2);border-radius:50%;transition:transform .3s,border-color .3s,background .3s}
+.social-link:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.08)}
+.social-link svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.footer-stores{display:flex;align-items:center;gap:18px}
+.store-link{display:flex;align-items:center;justify-content:center;height:30px;opacity:.82;transition:opacity .3s,transform .3s}
+.store-link:hover{opacity:1;transform:translateY(-2px)}
+.store-link img{display:block;width:auto;height:24px;max-width:110px;object-fit:contain}
