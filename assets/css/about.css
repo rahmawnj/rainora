@@ -1,14 +1,14 @@
 .about-hero{min-height:82vh;display:grid;grid-template-columns:1.05fr .95fr;align-items:end;gap:5vw;padding:9rem 6vw 7rem;background:#e9eee7;overflow:hidden}
 .about-copy{max-width:760px}
-.about-copy h1{font-family:var(--serif);font-size:clamp(4rem,8vw,8.5rem);font-weight:500;line-height:.9;letter-spacing:-.055em;margin:1.2rem 0 2rem}
+.about-copy h1{font-family:"DM Sans";font-size:clamp(4rem,8vw,8.5rem);font-weight:500;line-height:.9;letter-spacing:-.055em;margin:1.2rem 0 2rem}
 .about-copy h1 em{font-style:italic}
 .about-copy p{max-width:560px;font-size:1.1rem;line-height:1.8;color:var(--muted)}
 .about-mark{min-height:420px;border-radius:50% 50% 48% 48%;background:#d4dfd0;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-7deg);color:#253326}
-.about-mark span{font-family:var(--serif);font-size:clamp(2.5rem,5vw,5rem);letter-spacing:.08em}
+.about-mark span{font-family:"DM Sans";font-size:clamp(2.5rem,5vw,5rem);letter-spacing:.08em}
 .about-mark i{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-style:normal;margin-top:1rem}
 .about-intro,.about-story,.about-values,.about-closing{padding:9rem 6vw}
 .about-intro{display:grid;grid-template-columns:.28fr .72fr;gap:5vw}
-.about-intro h2,.story-copy h2{font-family:var(--serif);font-size:clamp(2.7rem,5vw,5.5rem);font-weight:500;line-height:.98;letter-spacing:-.04em;max-width:900px}
+.about-intro h2,.story-copy h2{font-family:"DM Sans";font-size:clamp(2.7rem,5vw,5.5rem);font-weight:500;line-height:.98;letter-spacing:-.04em;max-width:900px}
 .about-intro p,.story-copy p{max-width:680px;color:var(--muted);font-size:1rem;line-height:1.9;margin-top:2rem}
 .about-story{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:center;background:#f3efe8}
 .story-art{aspect-ratio:1/.98;background:linear-gradient(145deg,rgba(78,101,74,.18),rgba(218,197,169,.65)),url("https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1200&q=85") center/cover}
@@ -17,9 +17,9 @@
 .values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:4rem;background:rgba(37,51,38,.15)}
 .values-grid article{background:#e7ece4;padding:2.5rem 2rem;min-height:270px}
 .values-grid small{font-size:.7rem;letter-spacing:.12em}
-.values-grid h3{font-family:var(--serif);font-size:2.2rem;font-weight:500;margin:3rem 0 1rem}
+.values-grid h3{font-family:"DM Sans";font-size:2.2rem;font-weight:500;margin:3rem 0 1rem}
 .values-grid p{color:var(--muted);line-height:1.7}
 .about-closing{text-align:center;padding-block:11rem;background:#dce5d8}
-.about-closing h2{font-family:var(--serif);font-size:clamp(4rem,8vw,8rem);font-weight:500;letter-spacing:-.05em;margin:1rem 0 3rem}
+.about-closing h2{font-family:"DM Sans";font-size:clamp(4rem,8vw,8rem);font-weight:500;letter-spacing:-.05em;margin:1rem 0 3rem}
 @media(max-width:800px){.about-hero{grid-template-columns:1fr;min-height:auto;padding-top:8rem}.about-mark{min-height:300px;margin-top:2rem}.about-intro,.about-story{grid-template-columns:1fr;padding-block:6rem}.about-values{padding-block:6rem}.values-grid{grid-template-columns:1fr 1fr}.about-closing{padding-block:8rem}}
 @media(max-width:520px){.about-copy h1{font-size:3.5rem}.about-intro,.about-story,.about-values,.about-closing{padding-inline:5vw}.values-grid{grid-template-columns:1fr}.values-grid article{min-height:210px}.values-grid h3{margin-top:2rem}}
