@@ -53,3 +53,16 @@
 .hero-copy.loaded h1{transition-delay:.15s}.hero-copy.loaded p{transition-delay:.28s}.hero-copy.loaded .cta{transition-delay:.4s}
 @media(max-width:850px){.hero{grid-template-columns:1fr}.hero-art{min-height:50vh}.hero-copy{padding:130px 7vw 70px}.intro,.ritual{grid-template-columns:1fr;gap:45px}.grid{grid-template-columns:1fr 1fr}.card{min-height:390px}.ritual{padding:80px 7vw}.ritual-art{height:430px}.catgrid,.stories{grid-template-columns:1fr 1fr}.journal .stories{grid-template-columns:1fr}.footer-top{flex-direction:column}}
 @media(max-width:520px){.grid,.catgrid{grid-template-columns:1fr}.card{min-height:470px}.hero-copy h1{font-size:57px}.intro{padding:80px 7vw}.products,.categories,.journal{padding-left:7vw;padding-right:7vw}.section-head h2,.categories h2,.journal h2{font-size:34px}}
+
+
+/* Opening page transition */
+.rainora-loader{position:fixed;inset:0;z-index:1000;pointer-events:none;overflow:hidden;background:var(--deep)}
+.rainora-loader-panel{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;background:#30453b;color:#f5f5ef;transform:translateX(0);will-change:transform}
+.rainora-loader-brand{font:600 28px "DM Sans",sans-serif;letter-spacing:.2em;opacity:0;transform:translateY(14px);animation:rainoraLoaderBrand .65s cubic-bezier(.22,1,.36,1) .08s forwards}
+.rainora-loader-line{width:70px;height:1px;background:rgba(245,245,239,.45);margin-top:18px;transform:scaleX(0);transform-origin:left;animation:rainoraLoaderLine .55s cubic-bezier(.22,1,.36,1) .28s forwards}
+.rainora-loader.is-leaving .rainora-loader-panel{animation:rainoraLoaderExit 1.05s cubic-bezier(.77,0,.18,1) .05s forwards}
+@keyframes rainoraLoaderBrand{to{opacity:1;transform:none}}
+@keyframes rainoraLoaderLine{to{transform:scaleX(1)}}
+@keyframes rainoraLoaderExit{from{transform:translateX(0)}to{transform:translateX(100%)}}
+@media(max-width:560px){.rainora-loader-brand{font-size:24px}}
+@media(prefers-reduced-motion:reduce){.rainora-loader-panel{animation:rainoraLoaderExit .01ms linear forwards!important}.rainora-loader-brand,.rainora-loader-line{animation:none;opacity:1;transform:none}}
