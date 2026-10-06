@@ -32,3 +32,12 @@ button{font:inherit}
 @media(max-width:850px){.site-nav{display:none}}
 @media(max-width:560px){.site-header{height:72px;padding:0 7vw}.site-logo{font-size:24px}.site-cta{padding:9px 12px}.footer-top{flex-direction:column}.footer-bottom{flex-direction:column;gap:8px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+.nav-collection{position:relative;height:100%;display:flex;align-items:center}
+.collection-menu{position:absolute;top:calc(100% + 16px);left:50%;transform:translate(-50%,-8px);width:210px;padding:12px;background:rgba(245,245,239,.97);color:var(--ink);border:1px solid var(--line);box-shadow:0 18px 45px rgba(32,42,37,.12);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s ease,transform .35s cubic-bezier(.22,1,.36,1),visibility .3s}
+.collection-menu:before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px}
+.nav-collection:hover .collection-menu,.nav-collection:focus-within .collection-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0)}
+.collection-menu a{display:block;padding:10px 12px;font-size:9px;letter-spacing:.1em;text-transform:uppercase;transition:background .2s,padding-left .2s}
+.collection-menu a:hover{background:var(--sage);padding-left:16px}
+.site-header:not(.is-solid) .collection-menu{background:rgba(38,56,47,.96);color:#fff;border-color:rgba(255,255,255,.18)}
+.site-header:not(.is-solid) .collection-menu a:hover{background:rgba(255,255,255,.1)}
+@media(max-width:850px){.collection-menu{display:none}}
