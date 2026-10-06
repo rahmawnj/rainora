@@ -112,20 +112,25 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 const filters=document.querySelectorAll('.filter');
 const products=document.querySelectorAll('.product');
 const count=document.getElementById('count');
-filters.forEach(button=>{
- button.addEventListener('click',()=>{
-   filters.forEach(b=>b.classList.remove('active'));
-   button.classList.add('active');
-   const filter=button.dataset.filter;
-   let visible=0;
-   products.forEach(card=>{
-     const show=filter==='all'||card.dataset.category===filter;
-     card.classList.toggle('hide',!show);
-     if(show) visible++;
-   });
-   count.textContent=visible+' collection'+(visible===1?'':'s');
+
+function applyFilter(filter){
+ filters.forEach(b=>b.classList.toggle('active',b.dataset.filter===filter));
+ let visible=0;
+ products.forEach(card=>{
+   const show=filter==='all'||card.dataset.category===filter;
+   card.classList.toggle('hide',!show);
+   if(show) visible++;
  });
-});
+ count.textContent=visible+' collection'+(visible===1?'':'s');
+}
+
+filters.forEach(button=>button.addEventListener('click',()=>applyFilter(button.dataset.filter)));
+
+const requested=new URLSearchParams(window.location.search).get('category');
+if(requested && [...filters].some(b=>b.dataset.filter===requested)){
+ applyFilter(requested);
+ document.getElementById('collection').scrollIntoView({behavior:'smooth',block:'start'});
+}
 
 const cursor=document.querySelector('.cursor');
 if(cursor){
