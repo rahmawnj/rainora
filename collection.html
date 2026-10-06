@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Collection — RAINORA</title>
+<meta name="description" content="Explore the Rainora collection — fragrance, candle, aroma stone, linen spray, room fragrance, diffuser, incense and bukhur.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#202a25;--muted:#6c756f;--paper:#f5f5ef;--line:#dfe3da;--sage:#dce5d9;--deep:#30453b;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}
+.nav{height:82px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:var(--paper);position:relative;z-index:5}.logo{font:600 27px "Playfair Display",serif;letter-spacing:.13em}.links{display:flex;gap:32px;font-size:11px;letter-spacing:.13em;text-transform:uppercase}.links a{position:relative}.links a:after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .4s}.links a:hover:after{transform:scaleX(1);transform-origin:left}.bag{border:1px solid #bdc6bf;padding:11px 17px;border-radius:999px;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.hero{min-height:69vh;background:var(--deep);color:#fff;display:grid;grid-template-columns:1.15fr .85fr;position:relative;overflow:hidden}.hero-copy{padding:90px 8vw;display:flex;justify-content:center;flex-direction:column;position:relative;z-index:2}.eyebrow{font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.65;margin-bottom:23px}.hero h1{font:500 clamp(60px,9vw,130px)/.86 "Playfair Display",serif;margin:0;max-width:850px}.hero h1 em{font-style:italic;color:#dce8da}.hero p{font-size:15px;line-height:1.85;color:#cbd5cf;max-width:500px;margin:30px 0 0}.hero-number{position:absolute;left:8vw;bottom:28px;font-size:10px;letter-spacing:.15em;opacity:.45}.hero-art{background:linear-gradient(145deg,rgba(25,39,32,.1),rgba(18,28,24,.68)),url("https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1200&q=85") center/cover;min-height:560px;position:relative;transform:scale(1.08);transition:transform 1.6s cubic-bezier(.16,1,.3,1)}.hero-art.loaded{transform:scale(1)}.hero-art:before{content:"";position:absolute;inset:0;background:var(--deep);transform:translateY(0);transition:transform 1.15s cubic-bezier(.77,0,.18,1)}.hero-art.loaded:before{transform:translateY(-100%)}.floating{position:absolute;font:italic 18px "Playfair Display",serif;opacity:.7;animation:float 7s ease-in-out infinite}.f1{top:18%;left:10%}.f2{right:9%;bottom:24%;animation-delay:-2.5s}.f3{left:30%;bottom:9%;animation-delay:-4s}@keyframes float{0%,100%{transform:translate(0,0) rotate(-3deg)}50%{transform:translate(14px,-16px) rotate(4deg)}}
+.intro{padding:100px 8vw 75px;display:grid;grid-template-columns:.7fr 1.7fr;gap:8vw}.label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}.intro h2{font:500 clamp(38px,5vw,68px)/.98 "Playfair Display",serif;margin:0;max-width:850px}.intro p{color:var(--muted);line-height:1.9;max-width:620px;font-size:15px;margin:28px 0 0}
+.collection{padding:10px 5vw 120px}.topline{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid var(--line);padding:0 3vw 25px}.topline h2{font:500 43px "Playfair Display",serif;margin:0}.count{font-size:10px;color:var(--muted);letter-spacing:.15em;text-transform:uppercase}
+.filters{display:flex;gap:9px;flex-wrap:wrap;padding:24px 3vw 42px}.filter{background:transparent;border:1px solid #cdd3cc;border-radius:999px;padding:10px 16px;font:500 10px "DM Sans";letter-spacing:.08em;text-transform:uppercase;color:var(--muted);cursor:pointer;transition:.35s}.filter:hover,.filter.active{background:var(--deep);border-color:var(--deep);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:15px}.product{position:relative;overflow:hidden;background:#e5e8df;min-height:470px;grid-column:span 3;opacity:1;transform:translateY(0) scale(1);transition:opacity .45s,transform .55s cubic-bezier(.22,1,.36,1)}.product:nth-child(3n+1){margin-top:35px}.product:nth-child(5n){margin-top:-12px}.product.hide{opacity:0;transform:translateY(20px) scale(.97);pointer-events:none;position:absolute}.product-image{height:100%;width:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.22,1,.36,1);filter:saturate(.88)}.product:hover .product-image{transform:scale(1.055)}.shade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 43%,rgba(18,28,24,.78))}.product-info{position:absolute;left:0;right:0;bottom:0;color:#fff;padding:25px}.product-info small{font-size:9px;letter-spacing:.16em;text-transform:uppercase;opacity:.72}.product-info h3{font:500 27px "Playfair Display",serif;margin:7px 0 5px}.product-info p{font-size:11px;margin:0;color:#d9dfda}.arrow{position:absolute;right:22px;top:22px;width:36px;height:36px;border:1px solid rgba(255,255,255,.55);border-radius:50%;display:grid;place-items:center;color:#fff;opacity:0;transform:translate(8px,-8px);transition:.45s}.product:hover .arrow{opacity:1;transform:none}
+.feature{background:var(--sage);padding:120px 8vw;display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center}.feature-image{height:620px;background:url("https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1100&q=85") center/cover}.feature-copy h2{font:500 clamp(45px,6vw,82px)/.94 "Playfair Display",serif;margin:0 0 28px}.feature-copy p{color:#59655e;line-height:1.9;max-width:470px}.feature-link{display:inline-flex;margin-top:28px;padding:14px 20px;border-bottom:1px solid var(--deep);font-size:10px;letter-spacing:.13em;text-transform:uppercase}
+.marquee{overflow:hidden;white-space:nowrap;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0}.track{display:inline-flex;min-width:max-content;animation:marquee 25s linear infinite}.track span{font:italic 24px "Playfair Display",serif;padding:0 28px}.track b{font-size:10px;letter-spacing:.18em;color:var(--muted);align-self:center}@keyframes marquee{to{transform:translateX(-50%)}}
+footer{background:#26382f;color:#e8ede9;padding:70px 8vw 35px}.foot{display:flex;justify-content:space-between;gap:30px}.foot-logo{font:500 45px "Playfair Display",serif}.foot-note{color:#aebbb3;max-width:360px;font-size:13px;line-height:1.8}.foot-links{display:flex;gap:55px;font-size:12px;line-height:2.4;color:#c6d0ca}.copy{border-top:1px solid rgba(255,255,255,.15);margin-top:65px;padding-top:20px;display:flex;justify-content:space-between;color:#8f9e96;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.reveal{opacity:0;transform:translateY(45px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1)}.reveal.visible{opacity:1;transform:none}.cursor{position:fixed;width:9px;height:9px;border-radius:50%;background:#fff;mix-blend-mode:difference;pointer-events:none;z-index:99;transform:translate(-50%,-50%);display:none;transition:.2s}@media(min-width:900px){.cursor{display:block}}
+@media(max-width:900px){.links{display:none}.hero{grid-template-columns:1fr}.hero-art{min-height:48vh}.intro,.feature{grid-template-columns:1fr;gap:45px}.grid{grid-template-columns:repeat(2,1fr)}.product{grid-column:span 1}.product:nth-child(3n+1),.product:nth-child(5n){margin-top:0}.feature-image{height:470px}.foot{flex-direction:column}}
+@media(max-width:560px){.nav{height:72px}.bag{padding:9px 12px}.hero-copy{padding:85px 7vw 75px}.hero h1{font-size:60px}.intro{padding:78px 7vw 60px}.collection{padding-left:7vw;padding-right:7vw}.topline{padding-left:0;padding-right:0}.topline h2{font-size:35px}.filters{padding-left:0;padding-right:0}.grid{grid-template-columns:1fr}.product{min-height:500px}.feature{padding:80px 7vw}.feature-image{height:420px}.copy{flex-direction:column;gap:8px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="nav">
+<a class="logo" href="index.html">RAINORA</a>
+<nav class="links"><a href="index.html">Home</a><a href="#collection">Collection</a><a href="index.html#ritual">Ritual</a><a href="index.html#journal">Journal</a></nav>
+<a class="bag" href="#collection">Explore</a>
+</header>
+
+<main>
+<section class="hero">
+<div class="hero-copy">
+<div class="eyebrow">Rainora · 2026 collection</div>
+<h1>Objects for <em>every</em> kind of ritual.</h1>
+<p>From skin to space, from a quiet morning to a slow evening. Explore the Rainora collection and find the scent that belongs in your moment.</p>
+<div class="hero-number">COLLECTION / 01 — 08</div>
+</div>
+<div class="hero-art"><span class="floating f1">soft air</span><span class="floating f2">stay awhile</span><span class="floating f3">after rain</span></div>
+</section>
+
+<section class="intro reveal">
+<div class="label">The collection</div>
+<div>
+<h2>Fragrance can be worn, lit, misted, placed, and remembered.</h2>
+<p>Rainora brings together scent objects for the body and home — each made to become part of a small, personal ritual.</p>
+</div>
+</section>
+
+<div class="marquee"><div class="track"><span>BODY • HOME • OBJECT • RITUAL • </span><b>RAINORA</b><span>BODY • HOME • OBJECT • RITUAL • </span><b>RAINORA</b><span>BODY • HOME • OBJECT • RITUAL • </span><b>RAINORA</b></div></div>
+
+<section class="collection reveal" id="collection">
+<div class="topline"><h2>All collections</h2><span class="count" id="count">08 collections</span></div>
+<div class="filters">
+<button class="filter active" data-filter="all">All</button>
+<button class="filter" data-filter="fragrance">Fine Fragrance</button>
+<button class="filter" data-filter="candle">Candle</button>
+<button class="filter" data-filter="stone">Aroma Stone</button>
+<button class="filter" data-filter="linen">Linen Spray</button>
+<button class="filter" data-filter="room">Room Fragrance</button>
+<button class="filter" data-filter="diffuser">Diffuser</button>
+<button class="filter" data-filter="incense">Incense</button>
+<button class="filter" data-filter="bukhur">Bukhur</button>
+</div>
+
+<div class="grid">
+<article class="product" data-category="fragrance"><img class="product-image" src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=900&q=85"><div class="shade"></div><div class="arrow">↗</div><div class="product-info"><small>01 · Body</small><h3>Fine Fragrance</h3><p>For the skin · intimate & personal</p></div></article>
+<article class="product" data-category="candle"><img class="product-image" src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=900&q=85"><div class="shade"></div><div class="arrow">↗</div><div class="product-info"><small>02 · Home</small><h3>Candle</h3><p>For the room · warm & glowing</p></div></article>
+<article class="product" data-category="stone"><img class="product-image" src="https://images.unsplash.com/photo-1602523961358-f9f03dd557db?auto=format&fit=crop&w=900&q=85"><div class="shade"></div><div class="arrow">↗</div><div class="product-info"><small>03 · Object</small><h3>Aroma Stone</h3><p>For small spaces · soft & tactile</p></div></article>
+<article class="product" data-category="linen"><img class="product-image" src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=900&q=85"><div class="shade"></div><div class="arrow">↗</div><div class="product-info"><small>04 · Linen</small><h3>Linen Spray</h3><p>For fabric · fresh & weightless</p></div></article>
+<article class="product" data-category="room"><img class="product-image" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=85"><div class="shade"></div><div class="arrow">↗</div><div class="product-info"><small>05 · Space</small><h3>Room Fragrance</h3><p>For living spaces · atmospheric</p></div></article>
+<article class="product" data-category="diffuser"><img class="product-image" src="https://images.unsplash.com/photo-1603905179139-db12ab535f4a?auto=format&fit=crop&w=900&q=85"><div class="shade"></div><div class="arrow">↗</div><div class="product-info"><small>06 · Diffusion</small><h3>Diffuser</h3><p>For lasting scent · calm & continuous</p></div></article>
+<article class="product" data-category="incense"><img class="product-image" src="https://images.unsplash.com/photo-1602874801006-e26d7c95b8a6?auto=format&fit=crop&w=900&q=85"><div class="shade"></div><div class="arrow">↗</div><div class="product-info"><small>07 · Smoke</small><h3>Incense</h3><p>For the ritual · aromatic & meditative</p></div></article>
+<article class="product" data-category="bukhur"><img class="product-image" src="https://images.unsplash.com/photo-1603905179139-db12ab535f4a?auto=format&fit=crop&w=900&q=85"><div class="shade"></div><div class="arrow">↗</div><div class="product-info"><small>08 · Tradition</small><h3>Bukhur</h3><p>For the home · rich & lingering</p></div></article>
+</div>
+</section>
+
+<section class="feature reveal">
+<div class="feature-image"></div>
+<div class="feature-copy">
+<div class="eyebrow" style="color:var(--deep);opacity:.6">A different kind of object</div>
+<h2>Let scent become part of the room.</h2>
+<p>A candle on the table. A stone beside your bed. Linen that still smells beautiful after the room is quiet. Rainora is made for these little details.</p>
+<a class="feature-link" href="index.html#ritual">Explore the ritual ↗</a>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="foot">
+<div><div class="foot-logo">RAINORA</div><div class="foot-note">Scent, objects, and rituals for spaces that feel like home.</div></div>
+<div class="foot-links"><div><a href="#collection">Collection</a><br><a href="index.html#ritual">Our ritual</a></div><div><a href="index.html#journal">Journal</a><br><a href="#">Instagram</a></div></div>
+</div>
+<div class="copy"><span>© 2026 Rainora Scent</span><span>Made slowly · Bandung, Indonesia</span></div>
+</footer>
+
+<div class="cursor"></div>
+<script>
+const heroArt=document.querySelector('.hero-art');
+requestAnimationFrame(()=>heroArt.classList.add('loaded'));
+
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+ if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}
+}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+const filters=document.querySelectorAll('.filter');
+const products=document.querySelectorAll('.product');
+const count=document.getElementById('count');
+filters.forEach(button=>{
+ button.addEventListener('click',()=>{
+   filters.forEach(b=>b.classList.remove('active'));
+   button.classList.add('active');
+   const filter=button.dataset.filter;
+   let visible=0;
+   products.forEach(card=>{
+     const show=filter==='all'||card.dataset.category===filter;
+     card.classList.toggle('hide',!show);
+     if(show) visible++;
+   });
+   count.textContent=visible+' collection'+(visible===1?'':'s');
+ });
+});
+
+const cursor=document.querySelector('.cursor');
+if(cursor){
+ window.addEventListener('pointermove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'});
+ document.querySelectorAll('a,.filter,.product').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cursor.style.width='28px';cursor.style.height='28px'});
+  el.addEventListener('mouseleave',()=>{cursor.style.width='9px';cursor.style.height='9px'});
+ });
+}
+</script>
+</body>
+</html>
